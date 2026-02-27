@@ -1244,7 +1244,6 @@ func (ri *runIterator16) nextMany(hs uint32, buf []uint32) int {
 			buf2 := buf[n : n+moreVals]
 			i := 0
 			for ; i+3 < len(buf2); i += 4 {
-				_ = buf2[i+3]
 				buf2[i] = base
 				buf2[i+1] = base + 1
 				buf2[i+2] = base + 2
@@ -1295,7 +1294,6 @@ func (ri *runIterator16) nextMany64(hs uint64, buf []uint64) int {
 			buf2 := buf[n : n+moreVals]
 			i := 0
 			for ; i+3 < len(buf2); i += 4 {
-				_ = buf2[i+3]
 				buf2[i] = base
 				buf2[i+1] = base + 1
 				buf2[i+2] = base + 2
